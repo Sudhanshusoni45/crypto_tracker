@@ -1,0 +1,13 @@
+.card_container {
+  display: flex;
+  padding: 1rem;
+  box-shadow: 0px 1.17763px 14.1316px 3.53289px rgba(208, 214, 227, 0.3);
+  width: 22rem;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 0.3rem;
+  margin: 0 1rem;
+}
+.card_image {
+  width: 4.2rem;
+}
