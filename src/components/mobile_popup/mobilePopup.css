@@ -10,9 +10,10 @@
   background-color: white;
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 15rem;
+  width: 20rem;
   top: 50%;
   left: 50%;
+  border-radius: 0.5rem;
 }
 .mobile_popup_head {
   display: flex;
@@ -21,6 +22,10 @@
 }
 .mobilePopup_coin_image {
   width: 2rem;
+}
+.mobilePopup_table th,
+td {
+  padding: 0.5rem 0.4rem;
 }
 @media only screen and (max-width: 500px) {
   .mobile_popup_container {

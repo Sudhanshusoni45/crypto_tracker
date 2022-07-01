@@ -2,12 +2,10 @@
   width: 2rem;
 }
 .coinsTable {
-  margin: 0 auto;
-  width: 95%;
+  width: 100%;
   border-collapse: collapse;
 }
-.coinsTable,
-th,
+.coinsTable th,
 td {
   padding: 0.8rem 0.4rem;
 }

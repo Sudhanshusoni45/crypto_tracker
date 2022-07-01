@@ -2,9 +2,15 @@ import "./mobilePopup.css";
 
 const MobilePopup = ({
   setShowMobilePopup,
-  singleCoinData: { name, image: imageUrl, current_price },
+  singleCoinData: {
+    name,
+    image: imageUrl,
+    current_price,
+    price_change_percentage_24h,
+    price_change_percentage_7d_in_currency,
+    market_cap,
+  },
 }) => {
-  console.log("imageUrl:", imageUrl);
   const mobilePopupHandler = () => {
     setShowMobilePopup((prevState) => false);
   };
@@ -23,18 +29,24 @@ const MobilePopup = ({
             <i className="fas fa-times"></i>
           </button>
         </div>
-        <table>
+        <table className="mobilePopup_table">
           <thead>
-            <th>PRICE</th>
-            <th>24H</th>
-            <th>7D</th>
+            <th className="text_align_left">PRICE</th>
+            <th className="text_align_left">24H</th>
+            <th className="text_align_left">7D</th>
           </thead>
           <tbody>
             <tr>
               <td>${current_price}</td>
+              <td>{parseInt(price_change_percentage_24h)}%</td>
+              <td>{parseInt(price_change_percentage_7d_in_currency)}</td>
             </tr>
           </tbody>
         </table>
+        <div>
+          <span>Market Cap</span>
+          <span>{market_cap}</span>
+        </div>
       </div>
     </div>
   );

@@ -17,18 +17,23 @@ body {
   background: none;
   border: 0;
 }
+/* text */
 .grey_text {
   color: gray;
 }
+.red_text {
+  color: #ea3943;
+}
+/* margin */
 .small_margin_left {
   margin-left: 1rem;
 }
 .small_margin_bottom {
   margin-bottom: 1rem;
 }
-.red_text {
-  color: #ea3943;
-}
 .display_inline {
   display: inline;
+}
+.cursor_pointer {
+  cursor: pointer;
 }
