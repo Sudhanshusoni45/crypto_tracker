@@ -1,0 +1,29 @@
+.mobile_popup_container {
+  /* display: none; */
+  position: fixed;
+  background-color: rgba(1, 1, 1, 0.5);
+  height: 102vh;
+  width: 102vw;
+}
+.mobile_popup {
+  padding: 1rem;
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  top: 50%;
+  left: 50%;
+}
+.mobile_popup_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobilePopup_coin_image {
+  width: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .mobile_popup_container {
+    display: block;
+  }
+}
