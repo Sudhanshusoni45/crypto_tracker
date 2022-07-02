@@ -1,13 +1,22 @@
+.card_conatiner {
+  display: flex;
+}
 .coinImage {
   width: 2rem;
 }
+/* table */
 .coinsTable {
   width: 100%;
   border-collapse: collapse;
+  margin-right: 4rem;
 }
 .coinsTable th,
 .coinsTable td {
   padding: 0.8rem 0.4rem;
+  text-align: left;
+}
+.coinsTable td {
+  font-weight: bold;
 }
 .coinsTable tr {
   border-bottom: 1.3px solid rgba(239, 242, 245, 1);
@@ -32,4 +41,19 @@
 }
 .coin_24h_change {
   font-weight: bold;
+}
+.hide_in_desktop {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .hide_in_mobile {
+    display: none;
+  }
+  .hide_in_desktop {
+    display: block;
+  }
+  .coinsTable_container {
+    /* width: 100%; */
+  }
 }
