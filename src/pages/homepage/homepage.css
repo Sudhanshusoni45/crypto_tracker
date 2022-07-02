@@ -6,16 +6,19 @@
 }
 /* table */
 .coinsTable_container {
-  padding: 0 9rem;
+  margin: 0 auto;
+  width: 79%;
+  margin-bottom: 2rem;
+  /* background-color: red; */
 }
 .coinsTable {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
   margin-right: 4rem;
 }
 .coinsTable th,
 .coinsTable td {
-  padding: 0.8rem 0.4rem;
+  padding: 0.8rem 0.3rem;
   text-align: left;
 }
 .coinsTable td {
@@ -36,7 +39,7 @@
   align-items: center;
   margin-top: 1.5rem;
   gap: 0.5rem;
-  width: 79%;
+  width: 85%;
 }
 .slider_index_indicator {
   color: #0052fe;
@@ -58,7 +61,14 @@
 .select_rows_container {
   margin-left: auto;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1350px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+/* get the mobile view at 1250px */
+@media only screen and (max-width: 1250px) {
   .hide_in_mobile {
     display: none;
   }

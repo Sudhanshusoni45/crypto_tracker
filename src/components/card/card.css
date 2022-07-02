@@ -11,3 +11,8 @@
 .card_image {
   width: 4.2rem;
 }
+@media only screen and (max-width: 1350px) {
+  .card_container {
+    width: 20rem;
+  }
+}
