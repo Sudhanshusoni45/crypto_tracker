@@ -24,6 +24,15 @@ body {
 .red_text {
   color: #ea3943;
 }
+.green_text {
+  color: #16c784;
+}
+.bold_text {
+  font-weight: bold;
+}
+.font_size_small {
+  font-size: 0.9rem;
+}
 /* margin */
 .small_margin_left {
   margin-left: 1rem;
