@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* utility classes */
+.list_reset {
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.transparent_btn {
+  background: none;
+  border: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* text */
+.grey_text {
+  color: gray;
 }
-
-.App-link {
-  color: #61dafb;
+.red_text {
+  color: #ea3943;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.green_text {
+  color: #16c784;
+}
+.bold_text {
+  font-weight: bold;
+}
+.text_align_left {
+  text-align: left;
+}
+.font_size_small {
+  font-size: 0.9rem;
+}
+/* margin */
+.small_margin_left {
+  margin-left: 1rem;
+}
+.small_margin_bottom {
+  margin-bottom: 1rem;
+}
+.xs_margin_left {
+  margin-left: 0.3rem;
+}
+/* display */
+.display_inline_block {
+  display: inline-block;
+}
+.display_inline {
+  display: inline;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.hide_in_desktop {
+  display: none;
 }
