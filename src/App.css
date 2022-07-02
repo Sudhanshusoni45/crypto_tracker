@@ -40,6 +40,10 @@ body {
 .small_margin_bottom {
   margin-bottom: 1rem;
 }
+/* display */
+.display_inline_block {
+  display: inline-block;
+}
 .display_inline {
   display: inline;
 }
