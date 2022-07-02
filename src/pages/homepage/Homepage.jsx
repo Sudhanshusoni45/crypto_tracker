@@ -14,6 +14,7 @@ import { Card } from "../../components/card/Card";
 import { CategoryChip } from "../../components/category_chip/CategoryChip";
 import { MobilePopup } from "../../components/mobile_popup/MobilePopup";
 import { Navbar } from "../../components/navbar/Navbar";
+import Pagination from "../../components/pagination/Pagination";
 import { getCoinsDataHandler } from "../../util/getCoinsDataHandler";
 import "./homepage.css";
 
@@ -23,6 +24,7 @@ const Homepage = () => {
   const [showMobilePopup, setShowMobilePopup] = useState(false);
   const [categoryData, setCategoryData] = useState([]);
   const [coinsPerPage, setCoinsPerPage] = useState(10);
+  const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [cardSliderData, setCardSliderData] = useState([
     {
       title: "",
@@ -43,9 +45,12 @@ const Homepage = () => {
     setCoinsPerPage((prevState) => e.target.value);
   };
 
+  const paginate = (currentPageNumber) =>
+    setCurrentPageNumber((prevState) => currentPageNumber);
+
   useEffect(() => {
-    getCoinsDataHandler(setCoinData, coinsPerPage);
-  }, [coinsPerPage]);
+    getCoinsDataHandler(setCoinData, coinsPerPage, currentPageNumber);
+  }, [coinsPerPage, currentPageNumber]);
 
   useEffect(() => {
     setCardSliderData((prevData) => [
@@ -230,6 +235,7 @@ const Homepage = () => {
             </tr>
           )}
         </table>
+        <Pagination coinsPerPage={coinsPerPage} paginate={paginate} />
       </div>
     </>
   );
