@@ -133,7 +133,7 @@ const Homepage = () => {
           <select
             name="rows"
             id="rows"
-            className="small_margin_left"
+            className="select_rows"
             onChange={coinPerPageHandler}
           >
             <option value="10">10</option>

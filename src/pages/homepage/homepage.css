@@ -61,6 +61,13 @@
 .select_rows_container {
   margin-left: auto;
 }
+.select_rows {
+  border: 0px;
+  background-color: #eff2f5;
+  padding: 0.3rem;
+  margin-left: 0.6rem;
+  border-radius: 0.3rem;
+}
 @media only screen and (max-width: 1350px) {
   body {
     font-size: 90%;

@@ -4,16 +4,17 @@
   gap: 1rem;
   box-shadow: 0px 1px 8px rgba(19, 40, 56, 0.08);
   justify-content: space-between;
+  align-items: center;
 }
 .navbar_logo {
   display: flex;
   align-items: center;
-  margin-left: 11rem;
+  margin-left: 9rem;
 }
 .navbar_icons {
   display: flex;
   align-items: center;
-  margin-right: 11rem;
+  margin-right: 9rem;
 }
 @media only screen and (max-width: 900px) {
   .navigation_bar {

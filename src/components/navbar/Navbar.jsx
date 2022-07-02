@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="navbar_icons hide_in_mobile">
           <img src={search_icon} alt="search_icon" />
           <button className="transparent_btn small_margin_left">
-            <i className="fas fa-bars "></i>
+            <i className="fas fa-bars fa-lg "></i>
           </button>
         </div>
       </header>
