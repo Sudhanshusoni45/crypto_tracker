@@ -10,6 +10,7 @@ import quiz_img_card from "./quiz_img_card.svg";
 import left_arrow_icon from "./left_arrow_icon.svg";
 import right_arrow_icon from "./right_arrow_icon.svg";
 import search_icon from "./search_icon.svg";
+import star_icon from "./star_icon.svg";
 
 export { logo };
 export { card_img };
@@ -23,3 +24,4 @@ export { quiz_img_card };
 export { left_arrow_icon };
 export { right_arrow_icon };
 export { search_icon };
+export { star_icon };

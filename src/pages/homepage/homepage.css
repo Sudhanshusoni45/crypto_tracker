@@ -5,6 +5,9 @@
   width: 2rem;
 }
 /* table */
+.coinsTable_container {
+  padding: 0 9rem;
+}
 .coinsTable {
   width: 100%;
   border-collapse: collapse;
@@ -21,18 +24,19 @@
 .coinsTable tr {
   border-bottom: 1.3px solid rgba(239, 242, 245, 1);
 }
-.text_align_left {
-  text-align: left;
-}
+
 .homepage_heading {
-  margin: 1rem;
+  width: 79%;
+  margin: 1.5rem auto 1.5rem auto;
 }
-.homepage_slider {
+.homepage_slider_container {
+  margin: 0 auto;
   display: flex;
   flex-flow: column;
   align-items: center;
   margin-top: 1.5rem;
   gap: 0.5rem;
+  width: 79%;
 }
 .slider_index_indicator {
   color: #0052fe;
@@ -42,10 +46,18 @@
 .coin_24h_change {
   font-weight: bold;
 }
-.hide_in_desktop {
-  display: none;
+/* catrgory */
+.category_container {
+  display: flex;
+  width: 79%;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
-
+/* select rows */
+.select_rows_container {
+  margin-left: auto;
+}
 @media only screen and (max-width: 900px) {
   .hide_in_mobile {
     display: none;
@@ -53,7 +65,7 @@
   .hide_in_desktop {
     display: block;
   }
-  .coinsTable_container {
-    /* width: 100%; */
+  .homepage_heading {
+    width: 70%;
   }
 }

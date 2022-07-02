@@ -30,6 +30,9 @@ body {
 .bold_text {
   font-weight: bold;
 }
+.text_align_left {
+  text-align: left;
+}
 .font_size_small {
   font-size: 0.9rem;
 }
@@ -40,6 +43,9 @@ body {
 .small_margin_bottom {
   margin-bottom: 1rem;
 }
+.xs_margin_left {
+  margin-left: 0.3rem;
+}
 /* display */
 .display_inline_block {
   display: inline-block;
@@ -49,4 +55,7 @@ body {
 }
 .cursor_pointer {
   cursor: pointer;
+}
+.hide_in_desktop {
+  display: none;
 }

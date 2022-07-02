@@ -5,14 +5,20 @@ const Navbar = () => {
   return (
     <div>
       <header className="navigation_bar">
-        <div>
+        <button className="transparent_btn hide_in_desktop">
+          <i className="fas fa-bars "></i>
+        </button>
+        <div className="navbar_logo">
           <img src={logo} alt="crypto tracker logo" />
-          <h3>Crypto Tracker</h3>
+          <h3 className="display_inline_block xs_margin_left">
+            {" "}
+            Crypto Tracker
+          </h3>
         </div>
-        <div>
+        <div className="navbar_icons hide_in_mobile">
           <img src={search_icon} alt="search_icon" />
-          <button className="transparent_btn hide_in_mobile">
-            <i className="fas fa-bars"></i>
+          <button className="transparent_btn small_margin_left">
+            <i className="fas fa-bars "></i>
           </button>
         </div>
       </header>
