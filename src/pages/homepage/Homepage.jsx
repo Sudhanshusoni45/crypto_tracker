@@ -25,13 +25,7 @@ const Homepage = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [coinsPerPage, setCoinsPerPage] = useState(10);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const [cardSliderData, setCardSliderData] = useState([
-    {
-      title: "",
-      content: "",
-      card_image: "",
-    },
-  ]);
+  const [cardSliderData, setCardSliderData] = useState([]);
 
   const getSingleCoinData = (id) => coinData.find((coin) => coin.id === id);
 
@@ -96,7 +90,6 @@ const Homepage = () => {
           {cardSliderData.length ? (
             cardSliderData.map(({ title, content, card_image, id }) => (
               <li key={id} className="list_reset">
-                {console.log("sliderdata", id)}
                 <Card title={title} content={content} card_image={card_image} />
               </li>
             ))
@@ -126,7 +119,6 @@ const Homepage = () => {
         {categoryData.length
           ? categoryData.map(({ category_name, id, category_icon }) => (
               <li key={id} className="list_reset">
-                {console.log("categorydata", id)}
                 <CategoryChip
                   category_name={category_name}
                   category_icon={category_icon}
@@ -238,7 +230,6 @@ const Homepage = () => {
               </tr>
             )}
           </tbody>
-          {/* tbody */}
         </table>
         <Pagination coinsPerPage={coinsPerPage} paginate={paginate} />
       </div>
