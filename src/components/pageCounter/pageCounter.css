@@ -1,6 +1,9 @@
 .pageCounter {
   padding: 0.3rem 0.5rem;
-  border: 1px solid #0052fe;
+  border: 1px solid rgb(207, 211, 215);
   border-radius: 0.3rem;
   cursor: pointer;
+}
+.active_pageCounter {
+  border: 1px solid #0052fe;
 }
