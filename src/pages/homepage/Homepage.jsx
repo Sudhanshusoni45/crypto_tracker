@@ -148,9 +148,13 @@ const Homepage = () => {
             <tr>
               <th></th>
               <th>#</th>
-              <th colSpan={2}>NAME</th>
-              <th colSpan={1}>PRICE</th>
-              <th>
+              <th className="text_align_left" colSpan={2}>
+                NAME
+              </th>
+              <th className="text_align_right" colSpan={1}>
+                PRICE
+              </th>
+              <th className="text_align_right">
                 24H
                 <img
                   src={down_arrow}
@@ -158,10 +162,12 @@ const Homepage = () => {
                   className="display_inline xs_margin_left"
                 />
               </th>
-              <th className="hide_in_mobile">7D</th>
-              <th className="hide_in_mobile">MARKET CAP</th>
-              <th className="hide_in_mobile">VOLUME(24h)</th>
-              <th className="hide_in_mobile">CIRCULATING SUPPLY</th>
+              <th className="hide_in_mobile text_align_right">7D</th>
+              <th className="hide_in_mobile text_align_right">MARKET CAP</th>
+              <th className="hide_in_mobile text_align_right">VOLUME(24h)</th>
+              <th className="hide_in_mobile text_align_right">
+                CIRCULATING SUPPLY
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -199,26 +205,30 @@ const Homepage = () => {
                       <span className="grey_text">{symbol.toUpperCase()}</span>
                     </td>
 
-                    <td>${current_price.toLocaleString("en-US")}</td>
-                    <td className="red_text coin_24h_change">
+                    <td className="text_align_right">
+                      ${current_price.toLocaleString("en-US")}
+                    </td>
+
+                    <td className="red_text text_align_right ">
                       <img src={red_down_marker} alt="red_down_marker" />
-                      <span className="xs_margin_left">
+                      <span className="xs_margin_left ">
                         {parseInt(price_change_percentage_24h)}%
                       </span>
                     </td>
-                    <td className="hide_in_mobile">
+
+                    <td className="hide_in_mobile text_align_right">
                       {parseInt(price_change_percentage_7d_in_currency)}%{" "}
                     </td>
-                    <td className="hide_in_mobile">
+                    <td className="hide_in_mobile text_align_right">
                       ${market_cap.toLocaleString("en-US")}
                     </td>
-                    <td className="hide_in_mobile">
+                    <td className="hide_in_mobile text_align_right">
                       ${total_volume.toLocaleString("en-US")}
                     </td>
-                    <td className="hide_in_mobile">
+                    <td className="hide_in_mobile text_align_right">
                       {circulating_supply.toLocaleString("en-US")} BTC
                     </td>
-                    <td className="hide_in_mobile">
+                    <td className="hide_in_mobile text_align_right">
                       <img src={ellipsis_vertical} alt="ellipsis_vertical" />
                     </td>
                   </tr>

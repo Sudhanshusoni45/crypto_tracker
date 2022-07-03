@@ -33,6 +33,9 @@ body {
 .text_align_left {
   text-align: left;
 }
+.text_align_right {
+  text-align: right;
+}
 .font_size_small {
   font-size: 0.9rem;
 }

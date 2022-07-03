@@ -7,7 +7,7 @@
 /* table */
 .coinsTable_container {
   margin: 0 auto;
-  width: 79%;
+  width: 85%;
   margin-bottom: 2rem;
   /* background-color: red; */
 }
@@ -19,7 +19,7 @@
 .coinsTable th,
 .coinsTable td {
   padding: 0.8rem 0.3rem;
-  text-align: left;
+  /* text-align: left; */
 }
 .coinsTable td {
   font-weight: bold;
