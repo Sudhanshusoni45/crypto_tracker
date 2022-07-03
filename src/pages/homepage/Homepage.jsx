@@ -196,10 +196,13 @@ const Homepage = () => {
                         <img src={star_icon} alt="fav icon" />
                       </button>
                     </td>
+
                     <td>{market_cap_rank}</td>
+
                     <td>
                       <img src={imageUrl} alt={name} className="coinImage" />
                     </td>
+
                     <td>
                       {name}{" "}
                       <span className="grey_text">{symbol.toUpperCase()}</span>
@@ -217,7 +220,7 @@ const Homepage = () => {
                     </td>
 
                     <td className="hide_in_mobile text_align_right">
-                      {parseInt(price_change_percentage_7d_in_currency)}%{" "}
+                      {parseInt(price_change_percentage_7d_in_currency)}%
                     </td>
                     <td className="hide_in_mobile text_align_right">
                       ${market_cap.toLocaleString("en-US")}
@@ -236,7 +239,7 @@ const Homepage = () => {
               )
             ) : (
               <tr>
-                <td>Loading...</td>
+                <td>Loading table data...</td>
               </tr>
             )}
           </tbody>
