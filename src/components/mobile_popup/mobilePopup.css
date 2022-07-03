@@ -47,7 +47,7 @@ td {
   flex-flow: column;
   gap: 1.8rem;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1250px) {
   .mobile_popup_container {
     display: block;
   }

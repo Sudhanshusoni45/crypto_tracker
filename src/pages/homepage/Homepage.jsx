@@ -26,13 +26,15 @@ const Homepage = () => {
   const [coinsPerPage, setCoinsPerPage] = useState(10);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [cardSliderData, setCardSliderData] = useState([]);
-
+  const [windowWidth, setWindowWidth] = useState("");
   const getSingleCoinData = (id) => coinData.find((coin) => coin.id === id);
 
   const mobilePopupHandler = (id) => {
-    setShowMobilePopup((prevState) => true);
-    const foundCoinData = getSingleCoinData(id);
-    setSingleCoinData((prevState) => foundCoinData);
+    if (windowWidth < 1250) {
+      setShowMobilePopup((prevState) => true);
+      const foundCoinData = getSingleCoinData(id);
+      setSingleCoinData((prevState) => foundCoinData);
+    }
   };
 
   const coinPerPageHandler = (e) => {
@@ -41,6 +43,17 @@ const Homepage = () => {
 
   const paginate = (currentPageNumber) =>
     setCurrentPageNumber((prevState) => currentPageNumber);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth((prevState) => window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   useEffect(() => {
     getCoinsDataHandler(setCoinData, coinsPerPage, currentPageNumber);
