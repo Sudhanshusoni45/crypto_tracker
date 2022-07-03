@@ -67,6 +67,7 @@ const Homepage = () => {
         content: "Track your trades in one place,not all over the place",
       },
     ]);
+
     setCategoryData((prevState) => [
       { id: 4, category_icon: star_icon, category_name: "Favourites" },
       { id: 5, category_name: "CryptoCurrencies" },
@@ -83,6 +84,7 @@ const Homepage = () => {
           singleCoinData={singleCoinData}
         />
       ) : null}
+
       <Navbar />
       <div className="homepage_slider_container">
         <div className="card_conatiner hide_in_mobile">
@@ -98,6 +100,7 @@ const Homepage = () => {
           )}
           <img src={right_arrow_icon} alt="right_arrow_icon" />
         </div>
+
         <div className="hide_in_desktop">
           <Card
             title={cardSliderData[1]?.title}
@@ -105,6 +108,7 @@ const Homepage = () => {
             card_image={cardSliderData[1]?.card_image}
           />
         </div>
+
         <div className="hide_in_desktop">
           <i className="far fa-circle slider_index_indicator"> </i>
           <i className="fas fa-circle slider_index_indicator"> </i>
@@ -112,9 +116,11 @@ const Homepage = () => {
           <i className="far fa-circle slider_index_indicator"> </i>
         </div>
       </div>
+
       <div className="homepage_heading">
         <h3>Top 100 Cryptocurrencies by Market Cap</h3>
       </div>
+
       <div className="category_container hide_in_mobile">
         {categoryData.length
           ? categoryData.map(({ category_name, id, category_icon }) => (
@@ -126,6 +132,7 @@ const Homepage = () => {
               </li>
             ))
           : null}
+
         <div className="select_rows_container">
           <small>show rows</small>
           <select
@@ -142,6 +149,7 @@ const Homepage = () => {
           </select>
         </div>
       </div>
+
       <div className="coinsTable_container">
         <table className="coinsTable">
           <thead>
@@ -170,6 +178,7 @@ const Homepage = () => {
               </th>
             </tr>
           </thead>
+
           <tbody>
             {coinData ? (
               coinData.map(
