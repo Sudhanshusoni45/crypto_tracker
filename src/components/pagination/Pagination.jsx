@@ -15,7 +15,11 @@ const Pagination = ({ coinsPerPage, paginate }) => {
     <nav>
       <ul className="pageCounter_container">
         {pageNumbers.map((number) => (
-          <li className="list_reset" onClick={() => clickHandler(number)}>
+          <li
+            key={number}
+            className="list_reset"
+            onClick={() => clickHandler(number)}
+          >
             <PageCounter pageNumber={number} />
           </li>
         ))}
