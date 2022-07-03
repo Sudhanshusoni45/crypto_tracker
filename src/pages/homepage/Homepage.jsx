@@ -6,6 +6,7 @@ import {
   ellipsis_vertical,
   left_arrow_icon,
   quiz_img_card,
+  range_icon,
   red_down_marker,
   right_arrow_icon,
   star_icon,
@@ -252,8 +253,11 @@ const Homepage = () => {
                     </td>
                     <td className="hide_in_mobile text_align_right">
                       {circulating_supply.toLocaleString("en-US")} BTC
+                      <div>
+                        <img src={range_icon} alt="range icon" />
+                      </div>
                     </td>
-                    <td className="hide_in_mobile text_align_right">
+                    <td className="hide_in_mobile text_align_right table_ellipsis">
                       <img src={ellipsis_vertical} alt="ellipsis_vertical" />
                     </td>
                   </tr>

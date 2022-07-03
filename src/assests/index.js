@@ -11,6 +11,7 @@ import left_arrow_icon from "./left_arrow_icon.svg";
 import right_arrow_icon from "./right_arrow_icon.svg";
 import search_icon from "./search_icon.svg";
 import star_icon from "./star_icon.svg";
+import range_icon from "./range_icon.svg";
 
 export { logo };
 export { card_img };
@@ -25,3 +26,4 @@ export { left_arrow_icon };
 export { right_arrow_icon };
 export { search_icon };
 export { star_icon };
+export { range_icon };

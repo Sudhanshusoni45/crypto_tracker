@@ -27,7 +27,6 @@
 .coinsTable tr {
   border-bottom: 1.3px solid rgba(239, 242, 245, 1);
 }
-
 .homepage_heading {
   width: 85%;
   margin: 1.5rem auto 1.5rem auto;
@@ -49,6 +48,9 @@
 }
 .coin_24h_change {
   font-weight: bold;
+}
+.coinsTable .table_ellipsis {
+  padding-left: 1.5rem;
 }
 /* catrgory */
 .category_container {
