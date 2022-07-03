@@ -28,7 +28,6 @@ const Homepage = () => {
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [cardSliderData, setCardSliderData] = useState([]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log("windowWidth:", windowWidth);
   const getSingleCoinData = (id) => coinData.find((coin) => coin.id === id);
 
   const mobilePopupHandler = (id) => {
