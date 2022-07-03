@@ -9,12 +9,12 @@
 .navbar_logo {
   display: flex;
   align-items: center;
-  margin-left: 9rem;
+  margin-left: 6.5rem;
 }
 .navbar_icons {
   display: flex;
   align-items: center;
-  margin-right: 9rem;
+  margin-right: 6.5rem;
 }
 @media only screen and (max-width: 900px) {
   .navigation_bar {

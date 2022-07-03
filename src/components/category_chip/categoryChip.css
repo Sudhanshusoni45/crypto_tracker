@@ -4,3 +4,6 @@
   background-color: #eff2f5;
   border-radius: 0.5rem;
 }
+.active_link_color {
+  color: #3861fb;
+}

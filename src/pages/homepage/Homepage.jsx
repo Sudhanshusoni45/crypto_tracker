@@ -14,6 +14,7 @@ import { Card } from "../../components/card/Card";
 import { CategoryChip } from "../../components/category_chip/CategoryChip";
 import { MobilePopup } from "../../components/mobile_popup/MobilePopup";
 import { Navbar } from "../../components/navbar/Navbar";
+import Pagination from "../../components/pagination/Pagination";
 import { getCoinsDataHandler } from "../../util/getCoinsDataHandler";
 import "./homepage.css";
 
@@ -23,13 +24,8 @@ const Homepage = () => {
   const [showMobilePopup, setShowMobilePopup] = useState(false);
   const [categoryData, setCategoryData] = useState([]);
   const [coinsPerPage, setCoinsPerPage] = useState(10);
-  const [cardSliderData, setCardSliderData] = useState([
-    {
-      title: "",
-      content: "",
-      card_image: "",
-    },
-  ]);
+  const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const [cardSliderData, setCardSliderData] = useState([]);
 
   const getSingleCoinData = (id) => coinData.find((coin) => coin.id === id);
 
@@ -43,9 +39,12 @@ const Homepage = () => {
     setCoinsPerPage((prevState) => e.target.value);
   };
 
+  const paginate = (currentPageNumber) =>
+    setCurrentPageNumber((prevState) => currentPageNumber);
+
   useEffect(() => {
-    getCoinsDataHandler(setCoinData, coinsPerPage);
-  }, [coinsPerPage]);
+    getCoinsDataHandler(setCoinData, coinsPerPage, currentPageNumber);
+  }, [coinsPerPage, currentPageNumber]);
 
   useEffect(() => {
     setCardSliderData((prevData) => [
@@ -69,10 +68,10 @@ const Homepage = () => {
       },
     ]);
     setCategoryData((prevState) => [
-      { id: 1, category_icon: star_icon, category_name: "Favourites" },
-      { id: 2, category_name: "CryptoCurrencies" },
-      { id: 3, category_icon: null, category_name: "DeFi" },
-      { id: 4, category_icon: null, category_name: "NFTs & Collectibles" },
+      { id: 4, category_icon: star_icon, category_name: "Favourites" },
+      { id: 5, category_name: "CryptoCurrencies" },
+      { id: 6, category_icon: null, category_name: "DeFi" },
+      { id: 7, category_icon: null, category_name: "NFTs & Collectibles" },
     ]);
   }, []);
 
@@ -149,87 +148,103 @@ const Homepage = () => {
             <tr>
               <th></th>
               <th>#</th>
-              <th colSpan={2}>NAME</th>
-              <th colSpan={1}>PRICE</th>
-              <th>
+              <th className="text_align_left" colSpan={2}>
+                NAME
+              </th>
+              <th className="text_align_right" colSpan={1}>
+                PRICE
+              </th>
+              <th className="text_align_right">
                 24H
                 <img
                   src={down_arrow}
-                  alt=""
+                  alt="down arrow"
                   className="display_inline xs_margin_left"
                 />
               </th>
-              <th className="hide_in_mobile">7D</th>
-              <th className="hide_in_mobile">MARKET CAP</th>
-              <th className="hide_in_mobile">VOLUME(24h)</th>
-              <th className="hide_in_mobile">CIRCULATING SUPPLY</th>
+              <th className="hide_in_mobile text_align_right">7D</th>
+              <th className="hide_in_mobile text_align_right">MARKET CAP</th>
+              <th className="hide_in_mobile text_align_right">VOLUME(24h)</th>
+              <th className="hide_in_mobile text_align_right">
+                CIRCULATING SUPPLY
+              </th>
             </tr>
           </thead>
-          {coinData ? (
-            coinData.map(
-              ({
-                id,
-                market_cap_rank,
-                name,
-                image: imageUrl,
-                symbol,
-                current_price,
-                price_change_percentage_24h,
-                price_change_percentage_7d_in_currency,
-                market_cap,
-                total_volume,
-                circulating_supply,
-              }) => (
-                <tr
-                  key={id}
-                  onClick={() => mobilePopupHandler(id)}
-                  className="cursor_pointer"
-                >
-                  <td>
-                    <button className="transparent_btn">
-                      <img src={star_icon} alt="fav icon" />
-                    </button>
-                  </td>
-                  <td>{market_cap_rank}</td>
-                  <td>
-                    <img src={imageUrl} alt={name} className="coinImage" />
-                  </td>
-                  <td>
-                    {name}{" "}
-                    <span className="grey_text">{symbol.toUpperCase()}</span>
-                  </td>
+          <tbody>
+            {coinData ? (
+              coinData.map(
+                ({
+                  id,
+                  market_cap_rank,
+                  name,
+                  image: imageUrl,
+                  symbol,
+                  current_price,
+                  price_change_percentage_24h,
+                  price_change_percentage_7d_in_currency,
+                  market_cap,
+                  total_volume,
+                  circulating_supply,
+                }) => (
+                  <tr
+                    key={id}
+                    onClick={() => mobilePopupHandler(id)}
+                    className="cursor_pointer"
+                  >
+                    <td>
+                      <button className="transparent_btn">
+                        <img src={star_icon} alt="fav icon" />
+                      </button>
+                    </td>
 
-                  <td>${current_price.toLocaleString("en-US")}</td>
-                  <td className="red_text coin_24h_change">
-                    <img src={red_down_marker} alt="red_down_marker" />
-                    <span className="xs_margin_left">
-                      {parseInt(price_change_percentage_24h)}%
-                    </span>
-                  </td>
-                  <td className="hide_in_mobile">
-                    {parseInt(price_change_percentage_7d_in_currency)}%{" "}
-                  </td>
-                  <td className="hide_in_mobile">
-                    ${market_cap.toLocaleString("en-US")}
-                  </td>
-                  <td className="hide_in_mobile">
-                    ${total_volume.toLocaleString("en-US")}
-                  </td>
-                  <td className="hide_in_mobile">
-                    {circulating_supply.toLocaleString("en-US")} BTC
-                  </td>
-                  <td className="hide_in_mobile">
-                    <img src={ellipsis_vertical} alt="ellipsis_vertical" />
-                  </td>
-                </tr>
+                    <td>{market_cap_rank}</td>
+
+                    <td>
+                      <img src={imageUrl} alt={name} className="coinImage" />
+                    </td>
+
+                    <td>
+                      {name}{" "}
+                      <span className="grey_text">{symbol.toUpperCase()}</span>
+                    </td>
+
+                    <td className="text_align_right">
+                      ${current_price.toLocaleString("en-US")}
+                    </td>
+
+                    <td className="red_text text_align_right ">
+                      <img src={red_down_marker} alt="red_down_marker" />
+                      <span className="xs_margin_left ">
+                        {parseInt(price_change_percentage_24h)}%
+                      </span>
+                    </td>
+
+                    <td className="hide_in_mobile text_align_right">
+                      {parseInt(price_change_percentage_7d_in_currency)}%
+                    </td>
+                    <td className="hide_in_mobile text_align_right">
+                      ${market_cap.toLocaleString("en-US")}
+                    </td>
+                    <td className="hide_in_mobile text_align_right">
+                      ${total_volume.toLocaleString("en-US")}
+                    </td>
+                    <td className="hide_in_mobile text_align_right">
+                      {circulating_supply.toLocaleString("en-US")} BTC
+                    </td>
+                    <td className="hide_in_mobile text_align_right">
+                      <img src={ellipsis_vertical} alt="ellipsis_vertical" />
+                    </td>
+                  </tr>
+                )
               )
-            )
-          ) : (
-            <tr>
-              <td>Loading...</td>
-            </tr>
-          )}
+            ) : (
+              <tr>
+                <td>Loading table data...</td>
+              </tr>
+            )}
+          </tbody>
         </table>
+        <Pagination coinsPerPage={coinsPerPage} paginate={paginate} />
       </div>
     </>
   );

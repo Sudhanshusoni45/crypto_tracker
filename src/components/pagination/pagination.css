@@ -1,0 +1,16 @@
+.pageCounter_container {
+  display: flex;
+  gap: 0.5rem;
+  /* width: 30rem; */
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  width: 79%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .pageCounter_container {
+    margin: 1.5rem auto;
+    justify-content: center;
+  }
+}

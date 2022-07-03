@@ -7,7 +7,7 @@
 /* table */
 .coinsTable_container {
   margin: 0 auto;
-  width: 79%;
+  width: 85%;
   margin-bottom: 2rem;
   /* background-color: red; */
 }
@@ -19,7 +19,7 @@
 .coinsTable th,
 .coinsTable td {
   padding: 0.8rem 0.3rem;
-  text-align: left;
+  /* text-align: left; */
 }
 .coinsTable td {
   font-weight: bold;
@@ -29,7 +29,7 @@
 }
 
 .homepage_heading {
-  width: 79%;
+  width: 85%;
   margin: 1.5rem auto 1.5rem auto;
 }
 .homepage_slider_container {
@@ -39,7 +39,8 @@
   align-items: center;
   margin-top: 1.5rem;
   gap: 0.5rem;
-  width: 85%;
+  width: 90%;
+  /* background-color: red; */
 }
 .slider_index_indicator {
   color: #0052fe;
@@ -52,7 +53,7 @@
 /* catrgory */
 .category_container {
   display: flex;
-  width: 79%;
+  width: 85%;
   gap: 1rem;
   margin: 0 auto;
   margin-bottom: 2rem;
