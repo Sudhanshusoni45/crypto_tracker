@@ -35,19 +35,19 @@ const MobilePopup = ({
         <table className="mobilePopup_table">
           <thead>
             <th className="text_align_left font_size_small">PRICE</th>
-            <th className="text_align_left font_size_small">24H</th>
-            <th className="text_align_left font_size_small">7D</th>
+            <th className="text_align_right font_size_small ">24H</th>
+            <th className="text_align_right font_size_small">7D</th>
           </thead>
           <tbody>
             <tr>
               <td className="bold_text">
                 ${current_price.toLocaleString("en-US")}
               </td>
-              <td className="red_text bold_text">
+              <td className="red_text bold_text text_align_right">
                 <img src={red_down_marker} alt="red_down_marker" />
                 {parseInt(price_change_percentage_24h)}%
               </td>
-              <td className="green_text bold_text">
+              <td className="green_text bold_text text_align_right">
                 <img src={green_up_marker} alt="green_up_arrow" />
                 {parseInt(price_change_percentage_7d_in_currency)}%
               </td>

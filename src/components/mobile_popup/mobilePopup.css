@@ -6,11 +6,11 @@
   width: 102vw;
 }
 .mobile_popup {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: white;
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 20.5rem;
+  width: 21rem;
   top: 50%;
   left: 50%;
   border-radius: 0.5rem;
